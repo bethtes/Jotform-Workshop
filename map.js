@@ -154,24 +154,24 @@ const { MapboxLayer, ScatterplotLayer } = deck;
 function addUserLocation(latitude, longitude) {
   return map.addLayer(
     new MapboxLayer({
-      id: "user-location",
-      type: ScatterplotLayer,
-      data: [{ longitude, latitude }],
-      getPosition: (d) => [d.longitude, d.latitude],
-      getSourceColor: [0, 255, 0],
-      sizeScale: 15,
-      getSize: 10,
-      radiusUnits: "pixels",
-      getRadius: 5,
-      opacity: 0.7,
-      stroked: false,
-      filled: true,
-      radiusScale: 3,
-      getFillColor: [3, 202, 252],
-      parameters: {
-        depthTest: false,
-      },
-    })
+        id: "user-location",
+        type: ScatterplotLayer,
+        data: [{ longitude, latitude }],
+        getPosition: (d) => [d.longitude, d.latitude],
+        getSourceColor: [0, 255, 0],
+        sizeScale: 15,
+        getSize: 10,
+        radiusUnits: "pixels",
+        getRadius: 5,
+        opacity: 0.7,
+        stroked: false,
+        filled: true,
+        radiusScale: 3,
+        getFillColor: [3, 202, 252],
+        parameters: {
+          depthTest: false,
+       },
+      })
     );
   }
 
