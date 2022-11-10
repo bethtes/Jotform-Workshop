@@ -21,19 +21,17 @@ for (var i = 0; i < response.length; i++) {
       response[i].answers[answer].answer;
   });
 
-    // convert location coordinates string to float array
-    submissionProps["Location Coordinates"] = submissionProps[
-      "Location Coordinates"
-    ]
-      .split(/\r?\n/)
-      .map((x) => parseFloat(x.replace(/[^\d.-]/g, "")))
- 
-    console.log(submissionProps);
- 
-    // add submission to submissions array
-    submissions.push(submissionProps);
-  }
-
+      // convert location coordinates string to float array
+      submissionProps["Location Coordinates"] = submissionProps["Location Coordinates"]
+        .split(/\r?\n/)
+        .map((x) => parseFloat(x.replace(/[^\d.-]/g, "")))
+   
+      console.log(submissionProps);
+   
+      // add submission to submissions array
+      submissions.push(submissionProps);
+    }
+  
 // Import Layers from DeckGL
 const { MapboxLayer, ScatterplotLayer } = deck;
  
